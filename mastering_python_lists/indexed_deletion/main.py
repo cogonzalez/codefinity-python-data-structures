@@ -22,8 +22,8 @@ print("Alt Updated list:", travel_wishlist)
 
 travel_wishlist = ["Paris", "Oslo", "Kyoto", "Sydney", "Rome"]
 print("ALt2 Original list:", travel_wishlist)
-travel_wishlist.remove('Paris')
-travel_wishlist.remove('Kyoto')
+travel_wishlist.remove('Paris')    # deletes only the first occurance of 'Paris'
+travel_wishlist.remove('Kyoto')    # deletes only the first occurance of 'Kyoto'
 print("Alt2 Updated list:", travel_wishlist)
 
 

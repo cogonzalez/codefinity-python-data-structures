@@ -1,21 +1,48 @@
-space_movies = ('2001: A Space Odyssey', 'Interstellar', 'Star Wars: Episode IV - A New Hope', 'Gravity', 'The Martian')
-print("space_movies:",space_movies)
-# Write your code here
-first_movie = space_movies[0]
-last_movie = space_movies[-1]
-favorite_movies = [first_movie,last_movie]
-# Testing 
-print("Favorite movies about space:", favorite_movies)
+drama_movies = (
+    'The Shawshank Redemption',
+    'Forrest Gump',
+    'The Godfather',
+    'A Beautiful Mind',
+    'Fight Club',
+    'The Green Mile',
+    'The Pursuit of Happyness',
+    'Schindler\'s List'
+)
 
-movies = ("Inception", "Interstellar", "The Dark Knight", "Tenet", "Dunkirk", "Memento", "Following")
-print("movies:",movies)
-# Accessing the second movie
-print("Second movie in the tuple:", movies[1])
-# Accessing the sixth movie
-print("Sixth movie in the tuple:", movies[5])
-# Accessing the last movie
-print("Last movie in the tuple:", movies[-1])
-# Accessing the first movie
-print("first movie in the tuple:", movies[0])
-# Accessing the 4th from the last movie
-print("4th from last movie in the tuple:", movies[-4])
+
+# Write your code here
+fight_club_index = drama_movies.index('Fight Club')
+
+# Testing
+print("The 'Fight Club' movie is at index:", fight_club_index)
+
+
+dreamworks = (
+    'Shrek the Halls',
+    'Monsters vs. Aliens',
+    'Madagascar',
+    'Scared Shrekless',
+    'Kung Fu Panda',
+    'Dragons',
+    'Madagascar',
+    'Trolls Holiday',
+    'How to Train Your Dragon',
+    'Trolls',
+    'Madagascar'
+    )
+
+# One at a time *****************************
+first = dreamworks.index('Madagascar')
+second = dreamworks.index('Madagascar', first+1)
+third = dreamworks.index('Madagascar', second+1)
+#fourth = dreamworks.index('Madagascar', third+1)
+print(first, second, third)
+
+# Alternatively  ****************************
+# You don't know how many times this itme is in the list
+# You don't know when to stop searching
+# If you search beyond the occurrance you get an error
+found_index = 0 # this forces to start looking at index = 0
+for i in range(0,3):
+    found_index = dreamworks.index('Madagascar',found_index+i)
+    print(found_index)
